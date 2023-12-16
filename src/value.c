@@ -3,15 +3,18 @@
 #include "include/memory.h"
 #include "include/value.h"
 
-void initValueArray(ValueArray* array) {
+void initValueArray(ValueArray* array) 
+{
   array->values = NULL;
   array->capacity = 0;
   array->count = 0;
 }
 
-void writeValueArray(ValueArray* array, Value value) {
+void writeValueArray(ValueArray* array, Value value) 
+{
   // If the array is full, double its capacity
-  if (array->capacity < array->count + 1) {
+  if (array->capacity < array->count + 1) 
+  {
     int oldCapacity = array->capacity;
     // Double the capacity
     array->capacity = GROW_CAPACITY(oldCapacity);
@@ -24,14 +27,16 @@ void writeValueArray(ValueArray* array, Value value) {
   array->count++;
 }
 
-void freeValueArray(ValueArray* array) {
+void freeValueArray(ValueArray* array) 
+{
   // Free the array
   FREE_ARRAY(Value, array->values, array->capacity);
   // Reset the array
   initValueArray(array);
 }
 
-void printValue(Value value) {
+void printValue(Value value) 
+{
   printf("%g", value);
 }
 

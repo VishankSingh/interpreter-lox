@@ -5,7 +5,8 @@
 
 typedef double Value;
 
-typedef struct {
+typedef struct VALUE_ARRAY_STRUCT
+{
     int capacity;
     int count;
     Value* values;
