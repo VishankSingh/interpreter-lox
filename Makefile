@@ -17,5 +17,4 @@ install:
 
 #-rm *.o
 clean:
-	-rm *.out
 	-rm src/*.o
